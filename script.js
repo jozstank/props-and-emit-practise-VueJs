@@ -1,4 +1,5 @@
 import Post from "./Post.js";
+import CreatePost from "./CreatePost.js";
 
 const { createApp } = Vue;
 const app = createApp({
@@ -14,6 +15,14 @@ const app = createApp({
   },
   components: {
     "post-component": Post,
+    "createpost-component": CreatePost,
+  },
+  methods: {
+    createPost(data) {
+      if (data.title && data.content) {
+        this.posts.push(data);
+      }
+    },
   },
 });
 

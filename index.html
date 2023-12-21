@@ -7,6 +7,7 @@
   </head>
   <body>
     <div id="app">
+      <createpost-component @abc="createPost"></createpost-component>
       <post-component
         v-for="(post,index) in posts"
         :key="index"

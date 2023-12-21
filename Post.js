@@ -9,6 +9,9 @@ const Post = {
       type: String,
       //   required: true,
       default: "This is default Title",
+      validator: (value) => {
+        return value.startsWith("Title");
+      },
     },
     content: String,
   },
